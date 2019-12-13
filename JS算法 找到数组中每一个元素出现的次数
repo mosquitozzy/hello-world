@@ -1,0 +1,19 @@
+    var arr = ["c","a","z","a","x","a"];
+
+    function countNum(arr1){
+        var a = arr1;
+        var obj = {};
+        for(var i = 0;i < a.length;i++){
+            if(obj[arr1[i]]){
+                obj[arr1[i]] ++;
+            }else{
+                obj[arr1[i]] = 1;
+            }
+        }
+        return obj;
+    }
+
+    var result = countNum(arr);
+    for(var i in result){
+        console.log(i+":"+result[i]);
+    }
